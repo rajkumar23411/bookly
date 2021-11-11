@@ -12,8 +12,20 @@ window.onload = () => {
     } else {
         document.querySelector('header .header-2').classList.remove('active');
     }
+
+    fadeOut();
 }
 
+
+const loaderBook = document.querySelector('.loader');
+
+function loader() {
+    loaderBook.classList.add('viewLoader');
+}
+
+function fadeOut() {
+    setTimeout(loader, 4000);
+}
 
 
 const profileBtn = document.querySelector('.profile'),
@@ -185,12 +197,3 @@ window.addEventListener('scroll', (e) => {
     }
     e.preventDefault();
 });
-
-
-const loader = document.querySelector('.loader');
-
-window.onload = () => {
-    setTimeout(() => {
-        loader.classList.add('viewLoader');
-    }, 4000);
-}
